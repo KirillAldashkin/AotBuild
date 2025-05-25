@@ -11,11 +11,15 @@ jobs:
         arch: [x64, arm64]
         include:
           - rid: linux
-            os: ubuntu-latest
+            arch: x64
+            os: ubuntu-24.04
+          - rid: linux
+            arch: arm64
+            os: ubuntu-24.04-arm
           - rid: win
-            os: windows-latest
+            os: windows-2025
           - rid: osx
-            os: macos-latest
+            os: macos-15
     runs-on: ${{ matrix.os }}
     steps:
     - name: Checkout
