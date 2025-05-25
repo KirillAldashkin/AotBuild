@@ -35,4 +35,6 @@ jobs:
       uses: actions/upload-artifact@v4.6.2
       with:
         name: ${{ matrix.rid }}-${{ matrix.arch }}
-        path: bin/Release/net8.0/${{ matrix.rid }}-${{ matrix.arch }}/publish/
+        path: |
+          bin/Release/net8.0/${{ matrix.rid }}-${{ matrix.arch }}/publish/
+          !**.(pdb|dbg|dsym)
