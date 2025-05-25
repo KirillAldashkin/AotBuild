@@ -5,6 +5,7 @@ on:
 jobs:
   build:
     strategy:
+      fail-fast: false
       matrix:
         rid: [win, linux, osx]
         arch: [x64, arm64]
