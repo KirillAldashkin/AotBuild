@@ -1,6 +1,7 @@
 name: Publish .NET
 on:
-  release:
+  push:
+    branches: [main]
 jobs:
   build:
     strategy:
